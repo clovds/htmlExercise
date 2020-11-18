@@ -91,7 +91,7 @@
 
     button[id="signup"],
     input[type="submit"] {
-      margin-bottom: 28px;
+      margin-bottom: 5px;
       width: 120px;
       height: 32px;
       background: orangered;
@@ -157,6 +157,7 @@
         <input type="password" id="password2" placeholder="Confirm Password" />
         <!-- <input type="submit" value="sign up" onclick="signup()" /> -->
         <button id="signup" onclick="signup()">Sign Up</button>
+        <p id="alert"></p>
         <!-- </form> -->
       </div>
       <div class="left-box">
@@ -183,9 +184,13 @@
           password2: pass2,
         });
         console.log(users);
-        alert("Sign up success!");
+        return (document.getElementById("alert").innerHTML =
+          "Sign up success!");
+        // alert("Sign up success!");
       } else {
-        alert("Invalid password!");
+        // alert("Invalid password!");
+        return (document.getElementById("alert").innerHTML =
+          "Password does not matched!");
       }
     }
   </script>
