@@ -184,13 +184,18 @@
           password2: pass2,
         });
         console.log(users);
-        return (document.getElementById("alert").innerHTML =
-          "Sign up success!");
+        return (
+          (document.getElementById("alert").innerHTML = "Sign up success!"),
+          (document.getElementById("alert").style.color = "green")
+        );
         // alert("Sign up success!");
       } else {
         // alert("Invalid password!");
-        return (document.getElementById("alert").innerHTML =
-          "Password does not matched!");
+        return (
+          (document.getElementById("alert").innerHTML =
+            "Password does not matched!"),
+          (document.getElementById("alert").style.color = "red")
+        );
       }
     }
   </script>
